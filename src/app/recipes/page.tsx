@@ -7,7 +7,11 @@ export const dynamic = 'force-dynamic';
 export default async function RecipesPage({
   searchParams,
 }: {
-  searchParams: { query?: string; cuisine?: string; maxReadyTime?: string };
+  searchParams: Promise<{
+    query?: string;
+    cuisine?: string;
+    maxReadyTime?: string;
+  }>;
 }) {
   const { query = '', cuisine = '', maxReadyTime = '' } = await searchParams;
 
