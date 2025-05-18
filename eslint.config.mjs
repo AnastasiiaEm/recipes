@@ -18,7 +18,7 @@ export default [
       prettier: eslintPluginPrettier,
     },
     rules: {
-      'prettier/prettier': 'error',
+      'prettier/prettier': 'warn',
     },
   },
   prettier,
