@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { SPOONACULAR_BASE_URL } from '../constants';
 
 export default async function RecipeDetailsPage(props: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   const { id } = await props.params;
   const apiKey = process.env.SPOONACULAR_API_KEY;
@@ -25,7 +25,7 @@ export default async function RecipeDetailsPage(props: {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-gray-100 p-4">
       <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
         <h1 className="text-3xl font-semibold mb-6 text-gray-900">
           {recipe.title}
