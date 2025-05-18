@@ -6,7 +6,7 @@ A Recipe Finder application that allows users to search for recipes and view det
 
 ## Demo
 
-Add link
+[App Demo](https://recipes-orcin-tau.vercel.app/recipes/658615)
 
 ---
 
