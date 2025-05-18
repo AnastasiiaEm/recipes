@@ -2,10 +2,12 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { SPOONACULAR_BASE_URL } from '../constants';
 
-export default async function RecipeDetailsPage(props: {
+export default async function RecipeDetailsPage({
+  params,
+}: {
   params: Promise<{ id: string }>;
 }) {
-  const { id } = await props.params;
+  const { id } = await params;
   const apiKey = process.env.SPOONACULAR_API_KEY;
 
   const endpoint = `${SPOONACULAR_BASE_URL}${id}/information?apiKey=${apiKey}`;
